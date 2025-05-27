@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blablabus - Avis</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header/navigation -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="home.html" class="logo">
+                <i class="fas fa-bus"></i>
+                Blablabus
+            </a>
+            <ul class="nav-menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="routes.html">Routes</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="login.html" class="header-btn" id="loginLink">Login</a>
+                <a href="register.html" class="header-btn" id="registerLink">Register</a>
+                <a href="#" class="header-btn" id="logoutLink" style="display:none;">Logout</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="reviews">
+            <div class="container">
+                <h2 class="section-title">Avis / Forum</h2>
+                <p class="section-subtitle">Partage ton expérience avec la communauté Blablabus.</p>
+                <div class="reviews-container">
+                    <div class="review-form" id="reviewFormContainer" style="display:none;">
+                        <h3>Laisser un avis</h3>
+                        <div class="rating-input" id="ratingInput">
+                            <span class="star" data-rating="5">★</span>
+                            <span class="star" data-rating="4">★</span>
+                            <span class="star" data-rating="3">★</span>
+                            <span class="star" data-rating="2">★</span>
+                            <span class="star" data-rating="1">★</span>
+                        </div>
+                        <textarea class="review-textarea" id="reviewText" placeholder="Écris ton avis ici..."></textarea>
+                        <button class="submit-review" id="submitReview">Envoyer</button>
+                    </div>
+                    <div class="reviews-display" id="reviewsDisplay">
+                        <!-- Les avis seront affichés ici dynamiquement -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer sections -->
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Blablabus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
