@@ -116,16 +116,220 @@
             gap: 1rem;
         }
 
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M 80 0 L 0 0 0 80" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.4;
+        }
+
+        .hero-banner {
+            position: absolute;
+            top: 100px;
+            right: -50px;
+            background: #fef3c7;
+            color: #92400e;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            transform: rotate(12deg);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            z-index: 3;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat {
+            text-align: center;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            display: block;
+            color: #fbbf24;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-weight: 600;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .cta-primary {
+            background: #dc2626;
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.3);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4);
+        }
+
+        .cta-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Booking Card */
+        .booking-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+        }
+
+        .booking-card h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            color: #1f2937;
+            text-align: center;
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 700;
+            color: #374151;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group select, .form-group input {
+            padding: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .form-group select:focus, .form-group input:focus {
+            outline: none;
+            border-color: #dc2626;
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+        }
+
+        .search-btn {
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            color: white;
+            padding: 1.2rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.3);
+        }
+
+        .search-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4);
+        }
+
         /* Container */
         .container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
-        }
-
-        /* Section Styles */
-        main {
-            margin-top: 80px;
         }
 
         .section-title {
@@ -407,6 +611,123 @@
             box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4);
         }
 
+        /* Reviews Section */
+        .reviews {
+            padding: 8rem 0;
+            background: white;
+        }
+
+        .reviews-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .review-form {
+            background: #f8fafc;
+            padding: 3rem;
+            border-radius: 20px;
+            border: 2px solid #e5e7eb;
+        }
+
+        .review-form h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            color: #1f2937;
+        }
+
+        .rating-input {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .star {
+            font-size: 2rem;
+            color: #d1d5db;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .star:hover,
+        .star.active {
+            color: #fbbf24;
+        }
+
+        .review-textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            resize: vertical;
+            margin-bottom: 1.5rem;
+        }
+
+        .review-textarea:focus {
+            outline: none;
+            border-color: #dc2626;
+        }
+
+        .submit-review {
+            background: #dc2626;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-review:hover {
+            background: #b91c1c;
+        }
+
+        .reviews-display {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .review-item {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #dc2626;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .reviewer-name {
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .review-stars {
+            color: #fbbf24;
+        }
+
+        .review-text {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .review-date {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            margin-top: 0.5rem;
+        }
+
         /* About Section */
         .about {
             padding: 8rem 0;
@@ -469,11 +790,89 @@
             margin-bottom: 3rem;
         }
 
+        .footer-section h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul li a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .footer-section ul li a:hover {
+            color: #dc2626;
+        }
+
         .footer-bottom {
             border-top: 1px solid #374151;
             padding-top: 2rem;
             text-align: center;
             color: #9ca3af;
+        }
+
+        /* Auth Container */
+        .auth-container {
+            max-width: 400px;
+            margin: 120px auto 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+        .auth-container h2 {
+            margin-bottom: 2rem;
+            color: #1f2937;
+            font-weight: 900;
+        }
+        .auth-container .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        .auth-container label {
+            font-weight: 700;
+            color: #374151;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .auth-container input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .auth-container input:focus {
+            outline: none;
+            border-color: #dc2626;
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+        }
+        .auth-container button.header-btn {
+            width: 100%;
+            margin-top: 1rem;
+        }
+        .auth-container p {
+            margin-top: 1.5rem;
+            color: #6b7280;
+        }
+        .auth-container a {
+            color: #dc2626;
+            text-decoration: underline;
         }
 
         /* Mobile Responsive */
@@ -487,11 +886,33 @@
             .about-content {
                 grid-template-columns: 1fr;
             }
+            
+            .reviews-container {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
             .nav-menu {
                 display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
             }
             
             .section-title {
@@ -502,9 +923,25 @@
                 padding: 1rem;
             }
             
-            .form-row {
-                grid-template-columns: 1fr;
+            .hero-banner {
+                display: none;
             }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease forwards;
         }
     </style>
 </head>
@@ -521,6 +958,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#routes">Routes</a></li>
                 <li><a href="#tickets">Tickets</a></li>
+                <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
             <div class="auth-links">
@@ -532,39 +970,103 @@
     </header>
 
     <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-banner">Nouveau service disponible!</div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>Voyagez confortablement et économiquement</h1>
+                    <p class="subtitle">Découvrez notre réseau de transport urbain avec des options pour tous les budgets et besoins.</p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Destinations</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10K+</span>
+                            <span class="stat-label">Clients satisfaits</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Support client</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-cta">
+                        <a href="#tickets" class="cta-primary">Réservez maintenant</a>
+                        <a href="#routes" class="cta-secondary">Explorer les routes</a>
+                    </div>
+                </div>
+                
+                <div class="booking-card">
+                    <h3>Réservez votre voyage</h3>
+                    <form class="booking-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="departure">Départ</label>
+                                <select id="departure">
+                                    <option>Lyon</option>
+                                    <option>Paris</option>
+                                    <option>Marseille</option>
+                                    <option>Bordeaux</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Date</label>
+                                <input type="date" id="date">
+                            </div>
+                            <div class="form-group">
+                                <label for="passengers">Passagers</label>
+                                <select id="passengers">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="search-btn">Rechercher</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
         <!-- Services Section -->
         <section id="services" class="services">
             <div class="container">
-                <h2 class="section-title">Our Services</h2>
-                <p class="section-subtitle">Discover the best transportation options for your journey.</p>
+                <h2 class="section-title">Nos Services</h2>
+                <p class="section-subtitle">Découvrez les meilleures options de transport pour votre voyage.</p>
                 <div class="services-grid">
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-bus"></i>
                         </div>
                         <h3>Bus Services</h3>
-                        <p>Enjoy comfortable and reliable bus services across the city.</p>
+                        <p>Profitez de services de bus confortables et fiables dans toute la ville.</p>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-train"></i>
                         </div>
                         <h3>Train Services</h3>
-                        <p>Travel faster and more efficiently with our train services.</p>
+                        <p>Voyagez plus rapidement et plus efficacement avec nos services ferroviaires.</p>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-bicycle"></i>
                         </div>
                         <h3>Bike Services</h3>
-                        <p>Eco-friendly transportation for short distances.</p>
+                        <p>Transport écologique pour les courtes distances.</p>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-car"></i>
                         </div>
                         <h3>Car Services</h3>
-                        <p>Private transportation for your convenience.</p>
+                        <p>Transport privé pour votre confort.</p>
                     </div>
                 </div>
             </div>
@@ -574,7 +1076,7 @@
         <section id="routes" class="routes">
             <div class="container">
                 <h2 class="section-title">Routes</h2>
-                <p class="section-subtitle">Explore our route network.</p>
+                <p class="section-subtitle">Explorez notre réseau de routes.</p>
                 <div class="routes-grid">
                     <div class="route-card">
                         <div class="route-header">
@@ -583,7 +1085,7 @@
                         </div>
                         <div class="route-details">
                             <p class="route-time">30 minutes</p>
-                            <p class="route-frequency">Every 15 minutes</p>
+                            <p class="route-frequency">Toutes les 15 minutes</p>
                         </div>
                     </div>
                     <div class="route-card">
@@ -593,7 +1095,7 @@
                         </div>
                         <div class="route-details">
                             <p class="route-time">45 minutes</p>
-                            <p class="route-frequency">Every 20 minutes</p>
+                            <p class="route-frequency">Toutes les 20 minutes</p>
                         </div>
                     </div>
                 </div>
@@ -604,11 +1106,11 @@
         <section id="tickets" class="tickets">
             <div class="container">
                 <h2 class="section-title">Tickets</h2>
-                <p class="section-subtitle">Choose your ticket and travel with ease.</p>
+                <p class="section-subtitle">Choisissez votre ticket et voyagez en toute simplicité.</p>
                 <div class="tickets-grid">
                     <div class="ticket-card">
-                        <h3 class="ticket-type">Single Ticket</h3>
-                        <p class="ticket-desc">Travel one way</p>
+                        <h3 class="ticket-type">Ticket Simple</h3>
+                        <p class="ticket-desc">Voyage aller simple</p>
                         <div class="quantity-control">
                             <button class="quantity-btn">-</button>
                             <span class="quantity-display">1</span>
@@ -616,17 +1118,17 @@
                         </div>
                         <div class="ticket-price">
                             <span class="price-amount">5€</span>
-                            <span class="price-period">per trip</span>
+                            <span class="price-period">par trajet</span>
                         </div>
                         <ul class="ticket-features">
-                            <li>Valid for 24 hours</li>
-                            <li>Free cancellations</li>
+                            <li>Valable 24 heures</li>
+                            <li>Annulations gratuites</li>
                         </ul>
-                        <button class="ticket-btn">Buy Now</button>
+                        <button class="ticket-btn">Acheter</button>
                     </div>
                     <div class="ticket-card">
-                        <h3 class="ticket-type">Monthly Pass</h3>
-                        <p class="ticket-desc">Travel unlimited</p>
+                        <h3 class="ticket-type">Pass Mensuel</h3>
+                        <p class="ticket-desc">Voyages illimités</p>
                         <div class="quantity-control">
                             <button class="quantity-btn">-</button>
                             <span class="quantity-display">1</span>
@@ -634,13 +1136,54 @@
                         </div>
                         <div class="ticket-price">
                             <span class="price-amount">100€</span>
-                            <span class="price-period">per month</span>
+                            <span class="price-period">par mois</span>
                         </div>
                         <ul class="ticket-features">
-                            <li>Valid for 30 days</li>
-                            <li>Free cancellations</li>
+                            <li>Valable 30 jours</li>
+                            <li>Annulations gratuites</li>
                         </ul>
-                        <button class="ticket-btn">Buy Now</button>
+                        <button class="ticket-btn">Acheter</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="reviews">
+            <div class="container">
+                <h2 class="section-title">Avis / Forum</h2>
+                <p class="section-subtitle">Partagez votre expérience avec la communauté Blablabus.</p>
+                <div class="reviews-container">
+                    <div class="review-form" id="reviewFormContainer">
+                        <h3>Laisser un avis</h3>
+                        <div class="rating-input" id="ratingInput">
+                            <span class="star" data-rating="5">★</span>
+                            <span class="star" data-rating="4">★</span>
+                            <span class="star" data-rating="3">★</span>
+                            <span class="star" data-rating="2">★</span>
+                            <span class="star" data-rating="1">★</span>
+                        </div>
+                        <textarea class="review-textarea" id="reviewText" placeholder="Écrivez votre avis ici..."></textarea>
+                        <button class="submit-review" id="submitReview">Envoyer</button>
+                    </div>
+                    <div class="reviews-display" id="reviewsDisplay">
+                        <!-- Les avis seront affichés ici dynamiquement -->
+                        <div class="review-item">
+                            <div class="review-header">
+                                <span class="reviewer-name">Marie L.</span>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                            <p class="review-text">Service excellent, très ponctuel et confortable. Je recommande vivement!</p>
+                            <p class="review-date">12 mai 2023</p>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-header">
+                                <span class="reviewer-name">Pierre D.</span>
+                                <div class="review-stars">★★★★☆</div>
+                            </div>
+                            <p class="review-text">Bon service, mais un peu de retard. Dans l'ensemble, une bonne expérience.</p>
+                            <p class="review-date">5 avril 2023</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -649,46 +1192,111 @@
         <!-- About Section -->
         <section id="about" class="about">
             <div class="container">
-                <h2 class="section-title">About Us</h2>
-                <p class="section-subtitle">Learn more about our company and our mission.</p>
+                <h2 class="section-title">À propos de nous</h2>
+                <p class="section-subtitle">Découvrez notre entreprise et notre mission.</p>
                 <div class="about-content">
                     <div class="about-text">
-                        <h2>Our Story</h2>
-                        <p>Blablabus was founded in 2023 with a vision to revolutionize transportation. We believe in safe, reliable, and luxurious journeys across the city.</p>
-                        <p>Our team of experts is dedicated to providing the best transportation experience for our customers.</p>
+                        <h2>Notre Histoire</h2>
+                        <p>Blablabus a été fondé en 2023 avec la vision de révolutionner le transport. Nous croyons aux voyages sûrs, fiables et luxueux à travers la ville.</p>
+                        <p>Notre équipe d'experts est dédiée à offrir la meilleure expérience de transport pour nos clients.</p>
                     </div>
                     <div class="about-features">
                         <div class="about-feature">
                             <i class="fas fa-bus"></i>
-                            <span>15K+ Daily Passengers</span>
+                            <span>15K+ Passagers quotidiens</span>
                         </div>
                         <div class="about-feature">
                             <i class="fas fa-train"></i>
-                            <span>85 Modern Fleet</span>
+                            <span>85 Véhicules modernes</span>
                         </div>
                         <div class="about-feature">
                             <i class="fas fa-bicycle"></i>
-                            <span>30+ Active Routes</span>
+                            <span>30+ Routes actives</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Auth Container (Login/Register) - Hidden by default -->
+        <div id="authModal" style="display: none;">
+            <div class="auth-container" id="loginForm">
+                <h2>Connexion</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Mot de passe</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="header-btn">Se connecter</button>
+                </form>
+                <p>Pas encore de compte ? <a href="#" id="showRegister">S'inscrire</a></p>
+            </div>
+
+            <div class="auth-container" id="registerForm" style="display: none;">
+                <h2>Inscription</h2>
+                <form id="registerFormElement">
+                    <div class="form-group">
+                        <label for="regUsername">Nom d'utilisateur</label>
+                        <input type="text" id="regUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Mot de passe</label>
+                        <input type="password" id="regPassword" required>
+                    </div>
+                    <button type="submit" class="header-btn">S'inscrire</button>
+                </form>
+                <p>Déjà un compte ? <a href="#" id="showLogin">Se connecter</a></p>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <!-- Footer sections -->
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#routes">Routes</a></li>
+                        <li><a href="#tickets">Tickets</a></li>
+                        <li><a href="#reviews">Avis</a></li>
+                        <li><a href="#about">À propos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
+                        <li><i class="fas fa-envelope"></i> contact@blablabus.fr</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Rue de Paris, 75001 Paris</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div style="display: flex; gap: 15px; font-size: 1.5rem;">
+                        <a href="#" style="color: white;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: white;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: white;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: white;"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Blablabus. All rights reserved.</p>
+                <p>&copy; 2023 Blablabus. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // JavaScript for quantity controls
         document.addEventListener('DOMContentLoaded', function() {
             // Quantity controls
             const quantityBtns = document.querySelectorAll('.quantity-btn');
@@ -719,19 +1327,148 @@
                 }
             });
             
-            // Login/Logout functionality
+            // Stars rating
+            const stars = document.querySelectorAll('.star');
+            
+            stars.forEach(star => {
+                star.addEventListener('click', function() {
+                    const rating = this.getAttribute('data-rating');
+                    
+                    stars.forEach(s => {
+                        if (s.getAttribute('data-rating') <= rating) {
+                            s.classList.add('active');
+                        } else {
+                            s.classList.remove('active');
+                        }
+                    });
+                });
+            });
+            
+            // Submit review
+            const submitReview = document.getElementById('submitReview');
+            const reviewText = document.getElementById('reviewText');
+            const reviewsDisplay = document.getElementById('reviewsDisplay');
+            
+            submitReview.addEventListener('click', function() {
+                const activeStars = document.querySelectorAll('.star.active');
+                const rating = activeStars.length;
+                const text = reviewText.value.trim();
+                
+                if (rating === 0 || text === '') {
+                    alert('Veuillez donner une note et écrire un commentaire');
+                    return;
+                }
+                
+                // Create new review item
+                const reviewItem = document.createElement('div');
+                reviewItem.className = 'review-item';
+                
+                const reviewHeader = document.createElement('div');
+                reviewHeader.className = 'review-header';
+                
+                const reviewerName = document.createElement('span');
+                reviewerName.className = 'reviewer-name';
+                reviewerName.textContent = 'Vous';
+                
+                const reviewStars = document.createElement('div');
+                reviewStars.className = 'review-stars';
+                reviewStars.textContent = '★'.repeat(rating);
+                
+                reviewHeader.appendChild(reviewerName);
+                reviewHeader.appendChild(reviewStars);
+                
+                const reviewContent = document.createElement('p');
+                reviewContent.className = 'review-text';
+                reviewContent.textContent = text;
+                
+                const reviewDate = document.createElement('p');
+                reviewDate.className = 'review-date';
+                
+                const today = new Date();
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                reviewDate.textContent = today.toLocaleDateString('fr-FR', options);
+                
+                reviewItem.appendChild(reviewHeader);
+                reviewItem.appendChild(reviewContent);
+                reviewItem.appendChild(reviewDate);
+                
+                // Add to the beginning of the reviews
+                reviewsDisplay.prepend(reviewItem);
+                
+                // Reset form
+                stars.forEach(s => s.classList.remove('active'));
+                reviewText.value = '';
+            });
+            
+            // Login/Register modal
             const loginLink = document.getElementById('loginLink');
             const registerLink = document.getElementById('registerLink');
             const logoutLink = document.getElementById('logoutLink');
+            const authModal = document.getElementById('authModal');
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+            const showRegister = document.getElementById('showRegister');
+            const showLogin = document.getElementById('showLogin');
             
-            // Check if user is logged in (simulated)
-            const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            loginLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                authModal.style.display = 'block';
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+            });
             
-            if (isLoggedIn) {
+            registerLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                authModal.style.display = 'block';
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+            });
+            
+            showRegister.addEventListener('click', function(e) {
+                e.preventDefault();
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+            });
+            
+            showLogin.addEventListener('click', function(e) {
+                e.preventDefault();
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+            });
+            
+            // Close modal when clicking outside
+            window.addEventListener('click', function(e) {
+                if (e.target === authModal) {
+                    authModal.style.display = 'none';
+                }
+            });
+            
+            // Form submissions
+            document.querySelector('#loginForm form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Simulate login
+                localStorage.setItem('isLoggedIn', 'true');
+                authModal.style.display = 'none';
                 loginLink.style.display = 'none';
                 registerLink.style.display = 'none';
                 logoutLink.style.display = 'inline-block';
-            }
+                
+                // Show review form after login
+                document.getElementById('reviewFormContainer').style.display = 'block';
+            });
+            
+            document.getElementById('registerFormElement').addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Simulate registration and login
+                localStorage.setItem('isLoggedIn', 'true');
+                authModal.style.display = 'none';
+                loginLink.style.display = 'none';
+                registerLink.style.display = 'none';
+                logoutLink.style.display = 'inline-block';
+                
+                // Show review form after registration
+                document.getElementById('reviewFormContainer').style.display = 'block';
+            });
             
             logoutLink.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -739,8 +1476,46 @@
                 loginLink.style.display = 'inline-block';
                 registerLink.style.display = 'inline-block';
                 logoutLink.style.display = 'none';
+                
+                // Hide review form after logout
+                document.getElementById('reviewFormContainer').style.display = 'none';
+            });
+            
+            // Check if user is logged in
+            const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            
+            if (isLoggedIn) {
+                loginLink.style.display = 'none';
+                registerLink.style.display = 'none';
+                logoutLink.style.display = 'inline-block';
+                document.getElementById('reviewFormContainer').style.display = 'block';
+            } else {
+                document.getElementById('reviewFormContainer').style.display = 'none';
+            }
+            
+            // Smooth scrolling for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') === '#' || 
+                        this.getAttribute('id') === 'showRegister' || 
+                        this.getAttribute('id') === 'showLogin') {
+                        return;
+                    }
+                    
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
             });
         });
     </script>
 </body>
-</html>
+</html
