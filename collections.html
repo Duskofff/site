@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - ANYWEAR</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">ANYWEAR</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="collections.html" class="active">Collections</a></li>
+                    <li><a href="nouveautes.html">Nouveautés</a></li>
+                    <li><a href="sale.html">Sale</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="auth/steam_login.php" class="steam-btn" id="steamLogin">Se connecter</a>
+                    <button class="cart-btn" id="cartBtn">
+                        🛒 <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <div class="container">
+            <div class="page-header">
+                <h1>Collections</h1>
+                <p>Découvrez notre gamme complète</p>
+            </div>
+
+            <div class="filters">
+                <select class="filter-select">
+                    <option>Toutes catégories</option>
+                    <option>Streetwear</option>
+                    <option>Casual</option>
+                    <option>Outerwear</option>
+                </select>
+                <select class="filter-select">
+                    <option>Toutes tailles</option>
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+                <select class="filter-select">
+                    <option>Tous prix</option>
+                    <option>0€ - 50€</option>
+                    <option>50€ - 100€</option>
+                    <option>100€+</option>
+                </select>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">👕</div>
+                    <div class="product-info">
+                        <span class="product-category">Streetwear</span>
+                        <h4 class="product-name">T-Shirt Oversized</h4>
+                        <div class="product-price">39.99€</div>
+                        <button class="btn btn-primary add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">👖</div>
+                    <div class="product-info">
+                        <span class="product-category">Streetwear</span>
+                        <h4 class="product-name">Jean Cargo</h4>
+                        <div class="product-price">89.99€</div>
+                        <button class="btn btn-primary add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🧥</div>
+                    <div class="product-info">
+                        <span class="product-category">Outerwear</span>
+                        <h4 class="product-name">Veste Bomber</h4>
+                        <div class="product-price">149.99€</div>
+                        <button class="btn btn-primary add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">👟</div>
+                    <div class="product-info">
+                        <span class="product-category">Chaussures</span>
+                        <h4 class="product-name">Sneakers</h4>
+                        <div class="product-price">179.99€</div>
+                        <button class="btn btn-primary add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🎒</div>
+                    <div class="product-info">
+                        <span class="product-category">Accessoires</span>
+                        <h4 class="product-name">Sac à Dos</h4>
+                        <div class="product-price">69.99€</div>
+                        <button class="btn btn-primary add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🧢</div>
+                    <div class="product-info">
+                        <span class="product-category">Accessoires</span>
+                        <h4 class="product-name">Casquette</h4>
+                        <div class="product-price">29.99€</div>
+                        <button class="btn btn-primary add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

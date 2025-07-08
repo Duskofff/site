@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouveautés - ANYWEAR</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">ANYWEAR</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="nouveautes.html" class="active">Nouveautés</a></li>
+                    <li><a href="sale.html">Sale</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="auth/steam_login.php" class="steam-btn" id="steamLogin">Se connecter</a>
+                    <button class="cart-btn" id="cartBtn">
+                        🛒 <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <div class="hero-banner">
+            <div class="container">
+                <h1>Nouveautés</h1>
+                <p>Découvrez les dernières tendances</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <section class="new-arrivals">
+                <h2>Dernières Arrivées</h2>
+                <div class="products-grid">
+                    <div class="product-card new">
+                        <div class="new-badge">NOUVEAU</div>
+                        <div class="product-image">👕</div>
+                        <div class="product-info">
+                            <h4 class="product-name">T-Shirt Tech</h4>
+                            <p class="product-desc">Technologie anti-transpiration</p>
+                            <div class="product-price">49.99€</div>
+                            <button class="btn btn-primary add-to-cart">Ajouter</button>
+                        </div>
+                    </div>
+                    <div class="product-card new">
+                        <div class="new-badge">NOUVEAU</div>
+                        <div class="product-image">🧥</div>
+                        <div class="product-info">
+                            <h4 class="product-name">Veste Windbreaker</h4>
+                            <p class="product-desc">Protection légère</p>
+                            <div class="product-price">129.99€</div>
+                            <button class="btn btn-primary add-to-cart">Ajouter</button>
+                        </div>
+                    </div>
+                    <div class="product-card new">
+                        <div class="new-badge">NOUVEAU</div>
+                        <div class="product-image">👖</div>
+                        <div class="product-info">
+                            <h4 class="product-name">Jogger Premium</h4>
+                            <p class="product-desc">Confort optimal</p>
+                            <div class="product-price">79.99€</div>
+                            <button class="btn btn-primary add-to-cart">Ajouter</button>
+                        </div>
+                    </div>
+                    <div class="product-card new">
+                        <div class="new-badge">NOUVEAU</div>
+                        <div class="product-image">👟</div>
+                        <div class="product-info">
+                            <h4 class="product-name">Sneakers Innovation</h4>
+                            <p class="product-desc">Design futuriste</p>
+                            <div class="product-price">199.99€</div>
+                            <button class="btn btn-primary add-to-cart">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="featured-collection">
+                <div class="collection-content">
+                    <div class="collection-text">
+                        <h2>Collection Signature</h2>
+                        <p>Notre nouvelle collection signature combine innovation, style et durabilité.</p>
+                        <a href="collections.html" class="btn btn-primary">Découvrir</a>
+                    </div>
+                    <div class="collection-image">✨</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

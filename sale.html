@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale - ANYWEAR</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">ANYWEAR</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="nouveautes.html">Nouveautés</a></li>
+                    <li><a href="sale.html" class="active">Sale</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="auth/steam_login.php" class="steam-btn" id="steamLogin">Se connecter</a>
+                    <button class="cart-btn" id="cartBtn">
+                        🛒 <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <div class="sale-banner">
+            <div class="container">
+                <h1>SALE</h1>
+                <div class="discount-highlight">Jusqu'à -50%</div>
+                <p>Profitez de nos meilleures offres</p>
+            </div>
+        </div>
+
+        <div class="countdown-section">
+            <div class="container">
+                <h2>Offre limitée</h2>
+                <div class="countdown-timer">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">03</span>
+                        <span class="countdown-label">Jours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">12</span>
+                        <span class="countdown-label">Heures</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">45</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">30</span>
+                        <span class="countdown-label">Secondes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="products-grid">
+                <div class="product-card sale">
+                    <div class="sale-badge">-40%</div>
+                    <div class="product-image">👕</div>
+                    <div class="product-info">
+                        <h4 class="product-name">T-Shirt Classic</h4>
+                        <div class="price-container">
+                            <span class="current-price">23.99€</span>
+                            <span class="original-price">39.99€</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+                <div class="product-card sale">
+                    <div class="sale-badge">-50%</div>
+                    <div class="product-image">👖</div>
+                    <div class="product-info">
+                        <h4 class="product-name">Jean Slim</h4>
+                        <div class="price-container">
+                            <span class="current-price">44.99€</span>
+                            <span class="original-price">89.99€</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+                <div class="product-card sale">
+                    <div class="sale-badge">-30%</div>
+                    <div class="product-image">🧥</div>
+                    <div class="product-info">
+                        <h4 class="product-name">Veste Denim</h4>
+                        <div class="price-container">
+                            <span class="current-price">104.99€</span>
+                            <span class="original-price">149.99€</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+                <div class="product-card sale">
+                    <div class="sale-badge">-45%</div>
+                    <div class="product-image">👟</div>
+                    <div class="product-info">
+                        <h4 class="product-name">Sneakers Urban</h4>
+                        <div class="price-container">
+                            <span class="current-price">98.99€</span>
+                            <span class="original-price">179.99€</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const saleEnd = new Date().getTime() + (3 * 24 * 60 * 60 * 1000);
+            const distance = saleEnd - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
